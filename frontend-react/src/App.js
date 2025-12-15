@@ -4,6 +4,9 @@ import Login from './componentes/login';
 import Navbar from './componentes/navbar';
 import Dashboard from './pages/dashboard';
 import Trabajadores from './pages/trabajadores';
+import Buses from './pages/buses';
+import Roles from './pages/roles';
+import Asignaciones from './pages/asignaciones';
 import './App.css';
 
 function App() {
@@ -62,44 +65,11 @@ function App() {
         
         {currentView === 'trabajadores' && <Trabajadores />}
         
-        {currentView === 'buses' && (
-          <div className="coming-soon">
-            <div className="coming-soon-content">
-              <div className="icon">🚌</div>
-              <h2>Módulo de Buses</h2>
-              <p>Esta funcionalidad está en desarrollo</p>
-              <button onClick={() => handleViewChange('dashboard')} className="btn btn-primary">
-                Volver al Dashboard
-              </button>
-            </div>
-          </div>
-        )}
+        {currentView === 'buses' && <Buses />}
         
-        {currentView === 'roles' && (
-          <div className="coming-soon">
-            <div className="coming-soon-content">
-              <div className="icon">👔</div>
-              <h2>Módulo de Roles</h2>
-              <p>Esta funcionalidad está en desarrollo</p>
-              <button onClick={() => handleViewChange('dashboard')} className="btn btn-primary">
-                Volver al Dashboard
-              </button>
-            </div>
-          </div>
-        )}
+        {currentView === 'roles' && <Roles />}
         
-        {currentView === 'asignaciones' && (
-          <div className="coming-soon">
-            <div className="coming-soon-content">
-              <div className="icon">📋</div>
-              <h2>Módulo de Asignaciones</h2>
-              <p>Esta funcionalidad está en desarrollo</p>
-              <button onClick={() => handleViewChange('dashboard')} className="btn btn-primary">
-                Volver al Dashboard
-              </button>
-            </div>
-          </div>
-        )}
+        {currentView === 'asignaciones' && <Asignaciones />}
       </main>
 
       <footer className="app-footer">

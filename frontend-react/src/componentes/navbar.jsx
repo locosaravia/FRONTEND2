@@ -17,6 +17,7 @@ function Navbar({ currentView, onViewChange, onLogout }) {
     { id: 'trabajadores', label: 'Trabajadores', icon: '👷' },
     { id: 'buses', label: 'Buses', icon: '🚌' },
     { id: 'roles', label: 'Roles', icon: '👔' },
+    { id: 'asignaciones', label: 'Asignaciones', icon: '📋' },
   ];
 
   return (
@@ -25,6 +26,7 @@ function Navbar({ currentView, onViewChange, onLogout }) {
         <div className="navbar-brand" onClick={() => onViewChange('dashboard')}>
           <span className="brand-icon">🚌</span>
           <span className="brand-text">Sistema de Buses</span>
+          <span className="brand-badge">React</span>
         </div>
 
         <div className="navbar-menu">
@@ -42,9 +44,11 @@ function Navbar({ currentView, onViewChange, onLogout }) {
 
         <div className="navbar-user">
           <div className="user-info">
+            <span className="user-icon">👤</span>
             <span className="user-name">{username}</span>
           </div>
           <button onClick={handleLogout} className="logout-btn">
+            <span>🚪</span>
             Salir
           </button>
         </div>
